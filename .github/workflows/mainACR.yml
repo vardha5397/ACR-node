@@ -21,6 +21,19 @@ jobs:
                     node-version: 17
             - name: install dependencies
               run: npm ci
-    
-     
+    Login:
+        runs-on: ubuntu-latest
+        steps:
+            - name: get the code
+              uses: actions/checkout@v3
+            - name: setup the environment
+              uses: actions/setup-node@v3
+              with:
+                    node-version: 17
+            - name: list commands
+              run: ls
+            - name: Azure Login
+              uses: azure/login@v1
+              with:
+                    creds: ${{ secrets.AZURE_LOGIN }}     
           
