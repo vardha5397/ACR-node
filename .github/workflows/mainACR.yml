@@ -3,11 +3,11 @@ on:
     push:
         branches:
             - main
-    workflow_dispatch:
-       inputs:
-            description: 'pls  enter the branch name.'
-            default: main
-            required: true
+    #workflow_dispatch:
+       #inputs:
+            #description: 'pls  enter the branch name.'
+            #default: main
+            #required: true
 jobs:
     BuildJob:
         runs-on: ubuntu-latest
