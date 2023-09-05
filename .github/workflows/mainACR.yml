@@ -48,3 +48,4 @@ jobs:
               run: |
                    docker build -t ${{env.appName}}:v1 . 
                    docker images 
+                   docker tag ${{env.appName}}:v1 ${{secrets.ACR_SERVER}}/${{secrets.ACR_USERNAME}}:1.0.0 
